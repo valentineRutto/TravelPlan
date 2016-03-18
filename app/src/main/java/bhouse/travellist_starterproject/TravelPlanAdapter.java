@@ -4,6 +4,9 @@ import android.content.Context;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 /**
  * Created by valentine on 3/17/16.
@@ -29,7 +32,10 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-
+        public LinearLayout placeHolder;
+        public LinearLayout placeNameHolder;
+        public TextView placeName;
+        public ImageView placeImage;
         public ViewHolder(View itemView) {
             super(itemView);
         }
