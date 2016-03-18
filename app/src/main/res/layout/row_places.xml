@@ -37,6 +37,5 @@
         android:paddingLeft="10dp"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@android:color/white" />
-
 </LinearLayout>
     </android.support.v7.widget.CardView>
