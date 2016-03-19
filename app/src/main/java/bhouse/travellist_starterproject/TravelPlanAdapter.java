@@ -28,7 +28,8 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return 0;
+        return new PlaceData().placeList().size();
+
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
