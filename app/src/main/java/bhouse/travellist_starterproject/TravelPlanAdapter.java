@@ -25,6 +25,8 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
+        final Place place = new PlaceData().placeList().get(position);
+        holder.placeName.setText(place.name);
 
     }
 
