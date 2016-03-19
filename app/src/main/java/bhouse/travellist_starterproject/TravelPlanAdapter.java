@@ -9,6 +9,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 /**
  * Created by valentine on 3/17/16.
  */
@@ -27,6 +29,8 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
     public void onBindViewHolder(ViewHolder holder, int position) {
         final Place place = new PlaceData().placeList().get(position);
         holder.placeName.setText(place.name);
+        Picasso.with(mContext).load(place.getImageResourceId(mContext)).into(holder.placeImage);
+
 
     }
 
