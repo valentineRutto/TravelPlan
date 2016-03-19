@@ -15,6 +15,8 @@ public class MainActivity extends Activity {
   private boolean isListView;
   private RecyclerView mRecyclerView;
   private StaggeredGridLayoutManager mStaggeredLayoutManager;
+  private TravelPlanAdapter mAdapter;
+
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
