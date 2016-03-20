@@ -43,7 +43,7 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
 
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder {
+    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public LinearLayout placeHolder;
         public LinearLayout placeNameHolder;
         public TextView placeName;
@@ -55,5 +55,12 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
             placeNameHolder = (LinearLayout) itemView.findViewById(R.id.placeNameHolder);
             placeImage = (ImageView) itemView.findViewById(R.id.placeImage);
         }
+
+
+        @Override
+        public void onClick(View v) {
+
+        }
+
     }
 }
