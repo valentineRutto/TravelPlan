@@ -62,6 +62,9 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
 
         @Override
         public void onClick(View v) {
+            if (mItemClickListener != null) {
+                mItemClickListener.onItemClick(itemView, getPosition());
+            }
 
         }
     }
