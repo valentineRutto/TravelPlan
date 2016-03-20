@@ -26,6 +26,8 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_places, parent, false);
         return new ViewHolder(view);
+
+
     }
 
     @Override

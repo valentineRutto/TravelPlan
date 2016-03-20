@@ -7,6 +7,8 @@ import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Toast;
 
 
 public class MainActivity extends Activity {
@@ -30,8 +32,15 @@ public class MainActivity extends Activity {
 
     mAdapter = new TravelPlanAdapter(this);
     mRecyclerView.setAdapter(mAdapter);
-  }
 
+
+  }
+  TravelPlanAdapter.OnItemClickListener onItemClickListener = new TravelPlanAdapter.OnItemClickListener() {
+    @Override
+    public void onItemClick(View v, int position) {
+      Toast.makeText(MainActivity.this, "Clicked " + position, Toast.LENGTH_SHORT).show();
+    }
+  };
   private void setUpActionBar() {
 
   }
