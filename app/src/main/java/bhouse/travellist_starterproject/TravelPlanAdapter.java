@@ -17,7 +17,7 @@ import com.squareup.picasso.Picasso;
  */
 public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.ViewHolder> {
     Context mContext;
-    AdapterView.OnItemClickListener mItemClickListener;
+    OnItemClickListener mItemClickListener;
 
     public TravelPlanAdapter(Context context) {
         this.mContext = context;
@@ -43,11 +43,13 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
 
     }
 
+
     public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
         public LinearLayout placeHolder;
         public LinearLayout placeNameHolder;
         public TextView placeName;
         public ImageView placeImage;
+
         public ViewHolder(View itemView) {
             super(itemView);
             placeHolder = (LinearLayout) itemView.findViewById(R.id.mainHolder);
@@ -55,7 +57,6 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
             placeNameHolder = (LinearLayout) itemView.findViewById(R.id.placeNameHolder);
             placeImage = (ImageView) itemView.findViewById(R.id.placeImage);
             placeHolder.setOnClickListener(this);
-
         }
 
 
@@ -63,6 +64,12 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
         public void onClick(View v) {
 
         }
+    }
 
+    public interface OnItemClickListener {
+        void onItemClick(View view, int position);
+    }
+    public void setOnItemClickListener(final OnItemClickListener mItemClickListener) {
+        this.mItemClickListener = mItemClickListener;
     }
 }
