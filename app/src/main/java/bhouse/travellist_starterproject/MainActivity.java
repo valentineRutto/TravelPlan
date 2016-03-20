@@ -68,10 +68,12 @@ public class MainActivity extends Activity {
   private void toggle() {
     MenuItem item = menu.findItem(R.id.action_toggle);
     if (isListView) {
+      mStaggeredLayoutManager.setSpanCount(2);
       item.setIcon(R.drawable.ic_action_list);
       item.setTitle("Show as list");
       isListView = false;
     } else {
+      mStaggeredLayoutManager.setSpanCount(1);
       item.setIcon(R.drawable.ic_action_grid);
       item.setTitle("Show as grid");
       isListView = true;
