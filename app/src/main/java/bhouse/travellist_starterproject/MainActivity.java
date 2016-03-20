@@ -32,6 +32,7 @@ public class MainActivity extends Activity {
 
     mAdapter = new TravelPlanAdapter(this);
     mRecyclerView.setAdapter(mAdapter);
+    mAdapter.setOnItemClickListener(onItemClickListener);
 
 
   }
