@@ -109,6 +109,10 @@ public class DetailActivity extends Activity implements View.OnClickListener {
           mEditTextTodo.requestFocus();
           mInputManager.showSoftInput(mEditTextTodo, InputMethodManager.SHOW_IMPLICIT);
 
+          mAddButton.setImageResource(R.drawable.icn_morph);
+          mAnimatable = (Animatable) (mAddButton).getDrawable();
+          mAnimatable.start();
+
         } else {
           addToDo(mEditTextTodo.getText().toString());
           mToDoAdapter.notifyDataSetChanged();
