@@ -116,6 +116,7 @@ public class DetailActivity extends Activity implements View.OnClickListener {
   private void revealEditText(LinearLayout view) {
     int cx = view.getRight() - 30;
     int cy = view.getBottom() - 60;
+    int finalRadius = Math.max(view.getWidth(), view.getHeight());
 
   }
 
