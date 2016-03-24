@@ -1,6 +1,7 @@
 package bhouse.travellist_starterproject;
 
 import android.animation.Animator;
+import android.animation.AnimatorListenerAdapter;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -127,6 +128,20 @@ public class DetailActivity extends Activity implements View.OnClickListener {
   }
 
   private void hideEditText(final LinearLayout view) {
+    int cx = view.getRight() - 30;
+    int cy = view.getBottom() - 60;
+    int initialRadius = view.getWidth();
+    Animator anim = ViewAnimationUtils.createCircularReveal(view, cx, cy, initialRadius, 0);
+    anim.addListener(new AnimatorListenerAdapter() {
+      @Override
+      public void onAnimationEnd(Animator animation) {
+        super.onAnimationEnd(animation);
+        view.setVisibility(View.INVISIBLE);
+      }
+    });
+    isEditTextVisible = false;
+    anim.start();
+
 
   }
 
