@@ -1,11 +1,13 @@
 package bhouse.travellist_starterproject;
 
+import android.animation.Animator;
 import android.app.Activity;
 import android.content.Context;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.view.View;
+import android.view.ViewAnimationUtils;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.inputmethod.InputMethodManager;
@@ -117,6 +119,10 @@ public class DetailActivity extends Activity implements View.OnClickListener {
     int cx = view.getRight() - 30;
     int cy = view.getBottom() - 60;
     int finalRadius = Math.max(view.getWidth(), view.getHeight());
+    Animator anim = ViewAnimationUtils.createCircularReveal(view, cx, cy, 0, finalRadius);
+    view.setVisibility(View.VISIBLE);
+    isEditTextVisible = true;
+    anim.start();
 
   }
 
