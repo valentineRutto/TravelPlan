@@ -119,6 +119,10 @@ public class DetailActivity extends Activity implements View.OnClickListener {
           mInputManager.hideSoftInputFromWindow(mEditTextTodo.getWindowToken(), 0);
           hideEditText(mRevealView);
 
+          mAddButton.setImageResource(R.drawable.icon_morph_reverse);
+          mAnimatable = (Animatable) (mAddButton).getDrawable();
+          mAnimatable.start();
+
         }
     }
   }
