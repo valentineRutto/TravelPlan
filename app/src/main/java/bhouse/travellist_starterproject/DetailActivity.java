@@ -96,6 +96,7 @@ public class DetailActivity extends Activity implements View.OnClickListener {
   private void colorize(Bitmap photo) {
     Palette mPalette = Palette.generate(photo);
     applyPalette(mPalette);
+    colorize(photo);
   }
 
   private void applyPalette(Palette mPalette) {
