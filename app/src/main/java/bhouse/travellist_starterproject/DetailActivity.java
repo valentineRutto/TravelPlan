@@ -91,18 +91,20 @@ public class DetailActivity extends Activity implements View.OnClickListener {
 
   private void getPhoto() {
     Bitmap photo = BitmapFactory.decodeResource(getResources(), mPlace.getImageResourceId(this));
+    colorize(photo);
   }
 
   private void colorize(Bitmap photo) {
     Palette mPalette = Palette.generate(photo);
     applyPalette(mPalette);
-    colorize(photo);
+
   }
 
   private void applyPalette(Palette mPalette) {
     getWindow().setBackgroundDrawable(new ColorDrawable(mPalette.getDarkMutedColor(defaultColor)));
     mTitleHolder.setBackgroundColor(mPalette.getMutedColor(defaultColor));
     mRevealView.setBackgroundColor(mPalette.getLightVibrantColor(defaultColor));
+
   }
 
 
