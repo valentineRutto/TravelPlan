@@ -10,6 +10,7 @@ import android.graphics.drawable.Animatable;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.v7.graphics.Palette;
+import android.transition.Transition;
 import android.view.View;
 import android.view.ViewAnimationUtils;
 import android.view.animation.AlphaAnimation;
@@ -82,6 +83,13 @@ public class DetailActivity extends Activity implements View.OnClickListener {
   }
 
   private void windowTransition() {
+    getWindow().getEnterTransition().addListener(new TransitionAdapter() {
+      @Override
+      public void onTransitionEnd(Transition transition) {
+        mAddButton.animate().alpha(1.0f);
+        getWindow().getEnterTransition().removeListener(this);
+      }
+    })
 
   }
 
