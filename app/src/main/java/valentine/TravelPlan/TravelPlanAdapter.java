@@ -1,4 +1,4 @@
-package bhouse.travellist_starterproject;
+package valentine.TravelPlan;
 
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -8,12 +8,13 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.AdapterView;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
+
+import bhouse.travellist_starterproject.R;
 
 /**
  * Created by valentine on 3/17/16.
@@ -27,7 +28,8 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
     }
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.row_places, parent, false);
+        View view = LayoutInflater.from(parent.getContext()).inflate(
+                R.layout.row_places, parent, false);
         return new ViewHolder(view);
 
 
@@ -35,7 +37,7 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
 
     @Override
     public void onBindViewHolder(final ViewHolder holder, int position) {
-        final Place place = new PlaceData().placeList().get(position);
+        final Place place = new valentine.TravelPlan.PlaceData().placeList().get(position);
         holder.placeName.setText(place.name);
         Picasso.with(mContext).load(place.getImageResourceId(mContext)).into(holder.placeImage);
 
@@ -52,7 +54,7 @@ public class TravelPlanAdapter extends RecyclerView.Adapter<TravelPlanAdapter.Vi
 
     @Override
     public int getItemCount() {
-        return new PlaceData().placeList().size();
+        return new valentine.TravelPlan.PlaceData().placeList().size();
 
     }
 

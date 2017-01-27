@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package bhouse.travellist_starterproject;
+package valentine.TravelPlan;
 
 import android.transition.Transition;
 

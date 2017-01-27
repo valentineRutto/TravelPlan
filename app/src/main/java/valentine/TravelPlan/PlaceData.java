@@ -1,4 +1,4 @@
-package bhouse.travellist_starterproject;
+package valentine.TravelPlan;
 
 import java.util.ArrayList;
 

@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "417562206382",
+    "firebase_url": "https://travelplan-c513a.firebaseio.com",
+    "project_id": "travelplan-c513a",
+    "storage_bucket": "travelplan-c513a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:417562206382:android:38102a9869c5a275",
+        "android_client_info": {
+          "package_name": "bhouse.travellist_starterproject"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "417562206382-0kgkb4lrrq9br1f032su2r5um8k1nba0.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBaIMztgR05OKoPn38jcTTtp_eMyquoGsQ"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

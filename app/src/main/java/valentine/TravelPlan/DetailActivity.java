@@ -1,4 +1,4 @@
-package bhouse.travellist_starterproject;
+package valentine.TravelPlan;
 
 import android.animation.Animator;
 import android.animation.AnimatorListenerAdapter;
@@ -26,6 +26,8 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
+import bhouse.travellist_starterproject.R;
+
 public class DetailActivity extends Activity implements View.OnClickListener {
 
   public static final String EXTRA_PARAM_ID = "place_id";
@@ -48,7 +50,7 @@ public class DetailActivity extends Activity implements View.OnClickListener {
     super.onCreate(savedInstanceState);
     setContentView(R.layout.activity_detail);
 
-    mPlace = PlaceData.placeList().get(getIntent().getIntExtra(EXTRA_PARAM_ID, 0));
+    mPlace = valentine.TravelPlan.PlaceData.placeList().get(getIntent().getIntExtra(EXTRA_PARAM_ID, 0));
 
     mList = (ListView) findViewById(R.id.list);
     mImageView = (ImageView) findViewById(R.id.placeImage);
@@ -89,8 +91,8 @@ public class DetailActivity extends Activity implements View.OnClickListener {
         mAddButton.animate().alpha(1.0f);
         getWindow().getEnterTransition().removeListener(this);
       }
-    })
-
+    });
+  
   }
 
   private void addToDo(String todo) {

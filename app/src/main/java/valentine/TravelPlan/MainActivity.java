@@ -1,4 +1,4 @@
-package bhouse.travellist_starterproject;
+package valentine.TravelPlan;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -9,7 +9,8 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
-import android.widget.Toast;
+
+import bhouse.travellist_starterproject.R;
 
 
 public class MainActivity extends Activity {
@@ -23,7 +24,8 @@ public class MainActivity extends Activity {
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
-    setContentView(R.layout.activity_main);
+    setContentView(
+            R.layout.activity_main);
 
     isListView = true;
 
@@ -40,7 +42,7 @@ public class MainActivity extends Activity {
   TravelPlanAdapter.OnItemClickListener onItemClickListener = new TravelPlanAdapter.OnItemClickListener() {
     @Override
     public void onItemClick(View v, int position) {
-      Toast.makeText(MainActivity.this, "Clicked " + position, Toast.LENGTH_SHORT).show();
+//      Toast.makeText(MainActivity.this, "Clicked " + position, Toast.LENGTH_SHORT).show();
 
       Intent intent = new Intent(MainActivity.this, DetailActivity.class);
       intent.putExtra(DetailActivity.EXTRA_PARAM_ID, position);
