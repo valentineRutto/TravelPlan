@@ -16,6 +16,7 @@ import android.view.ViewAnimationUtils;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
 import android.view.inputmethod.InputMethodManager;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.EditText;
 import android.widget.ImageButton;
@@ -23,6 +24,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -71,6 +73,23 @@ public class DetailActivity extends Activity implements View.OnClickListener {
     loadPlace();
     windowTransition();
     getPhoto();
+
+
+//  delete listview item on longpress
+    mList.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+      @Override
+      public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
+        mTodoList.remove(position);
+        mToDoAdapter.notifyDataSetChanged();
+        Toast.makeText(DetailActivity.this, "Delete complete", Toast.LENGTH_SHORT).show();
+        return true;
+      }
+    });
+
+
+
+
+
   }
 
   private void setUpAdapter() {
